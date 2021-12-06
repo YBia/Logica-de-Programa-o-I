@@ -1,0 +1,80 @@
+<script>
+
+document.write("<h1> PORCENTAGEM DE ACERTOS DA PROVA DE RAFAELA! </h1>" + "<br>" + "Lembrando que Rafaela acertou 15 DE 50 questões" + "<br><br>")
+document.write ("Sua porcentagem foi: "  +  15/50 *100 + " %")
+document.write( "<br>") 
+
+</script>
+*************************************************************************************************************************************************************************
+<h1>Quantos anos você tem de diferença do seu irmão?</h1>
+<script>
+
+function diferençaDeIdade () {
+    document.write (20-17)
+}
+
+function pulaLinha(){
+
+    document.write ( "<br>")
+}
+
+function mostra (frase) {
+
+    document.write (frase)
+    
+}
+
+mostra ("Nossa diferença de idade é ") + diferençaDeIdade() 
+pulaLinha()
+</script>
+**********************************************************************************************************************************************************************
+<h1> Desde 1500 até o ano atual, quantas gerações se passaram? </h1>
+ 
+<script>
+
+ function anos (){
+   document.write (( 2021-1500) / 28)
+ }
+
+ function pulaLinha (){
+    document.write ( "<br>")
+}
+
+function mostra (texto) {
+    document.write (texto)
+}
+
+mostra(" Em média, um casal tem filhos quando atinge a idade de 28 anos.") + pulaLinha() 
+mostra ("Sendo assim, ")
+mostra (" desde 1500 até o ano atual, se passaram ") + anos ()  
+mostra ( " gerações! ")
+
+</script>
+
+<br> <br>
+Outra forma de fazer esse codigo é: <br> <br>
+1. Usando Funções. <br>  
+2. Variaveis. 
+<br> <br>
+
+<meta charset="UTF-8">
+
+    <script>
+     function pulaLinha() {
+            document.write("<br>")
+        }
+
+        function mostra (frase) {
+            document.write(frase)
+            pulaLinha();
+        }
+
+        var idadeMediaQuandoTemFilhos = 28;
+        var anoAtual = 2021; 
+        var quantidadeDeGeracoes = (anoAtual - 1500) / idadeMediaQuandoTemFilhos;
+
+        mostra(quantidadeDeGeracoes);
+        pulaLinha()
+        document.write (" ARREDONDANDO ESSE VALOR COM MATH.ROUND, TEMOS ") + document.write( Math.round (quantidadeDeGeracoes ))
+
+    </script>

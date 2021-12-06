@@ -1,0 +1,74 @@
+<meta charset=" UTF-8">
+
+<h1>  Você é bom em adivinhação? </h1> 
+Prove! Digite um número entre 1 à 10! 
+<br> <br>
+<input/>
+<button> Descubra o segredo! </button> 
+
+<script>
+
+  function sorteia () {
+    return  Math.round (Math.random ()* 10)
+  }
+
+  function sorteiaNumeros (quantidade) {
+
+    var segredos = []
+    var numero = 1
+
+    while (numero <= quantidade) {
+      var numeroAleatorio = sorteia
+
+      if (numeroAleatorio !== 0){
+        var achou = false
+
+        for (var posição = 0; posição < segredos.length; posição ++){
+
+          if ( segredos [posição] == numeroAleatorio){
+            achou =  true
+            break
+          }
+        }
+
+        if (achou == false) {
+          segredos. push (numeroAleatorio)
+          numero ++ 
+        }
+      } 
+    }
+    
+    return segredos
+  }
+
+ var segredos = sorteiaNumeros (3)
+ console.log ()
+
+ var input = document.querySelector ("input")
+ input.focus ()
+
+  function verifica () {
+    var encontrou = false
+     
+    for ( var posição = 0; posição < segredos.length; posição ++) { // O  ** .length** meio que conta quantos números temos no array (colchetes) 
+      
+      if (input.value == segredos [posição]) {
+        alert ( "Você ACERTOU!!")
+        encontrou = true
+        break
+      }
+
+      if (encontrou == false) {
+        alert ("Você ERROU!")
+       }
+
+     input. value = ""
+     input. focus ()
+    }
+  }
+    
+
+ var button = document.querySelector ("button") 
+ button.onclick = verifica
+
+</script>

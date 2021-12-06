@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<script>
+function pulaLinha () {
+    document.write ("<br>");
+    document.write ("<br>");
+}
+
+function mostra (frase) {
+    document.write (frase);
+    pulaLinha();
+}
+var vitorias = parseInt (prompt ("Entre com o número de vitórias."));
+var empates = parseInt (prompt ("Entre com o número de empates."));
+var pontos = vitorias  * 3 + empates;  // Uma vitória vale 3 (três) pontos, e um empate, 1 (um) ponto.
+
+mostra ("Os pontos do seu time são " + pontos);
+
+// Sempre que usamos o ***prompt()***, o conteúdo é lido como um texto. Já a função ***parseInt()***, é preparada para receber um texto e o converter em número.
+
+if (pontos > 28) {
+mostra (" Seu time está melhor do que no ano passado! :) " )
+}
+
+if (pontos < 28) {
+mostra (" Seu time está pior do que no ano passado :(")
+}
+
+if ( pontos == 28) {
+    mostra (" Seu time está igual ao ano passado :/ ")
+}
+ 
+</script>

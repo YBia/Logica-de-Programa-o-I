@@ -1,0 +1,60 @@
+<meta charset=" UTF-8">
+<script>
+
+function pulaLinha() {
+ document.write ( "<br><br>")
+}
+
+function mostra(frase) {
+ document.write (frase)
+}
+
+function calculaImc (peso, altura) { 
+ var imc = peso / (altura * altura) // Eu posso colocar direto assim: return = peso / (altura * altura)
+ return imc // Ao calcularmos o IMC dentro da função, a variável IMC guarda o resultado, e a palavra return deixa disponível à esquerda 
+            //da variável o resultado que foi calculado pela função. Podendo usa-la por exemplo dentro de uma var, como abaixo.
+}
+
+var imcAmigo = calculaImc (68, 1.72) // Por debaixo dos panos fica assim: var imcAmigo = 22.985397512168742
+var imcFlávio = calculaImc (73, 1.71) //  var imcFlávio = 24.96494647925858
+
+mostra(" O IMC do meu Amigo é " + imcAmigo)
+pulaLinha() 
+mostra (" O IMC do Flávio é " + imcFlávio)
+pulaLinha() 
+
+// Se eu quiser somar  os dois IMC´s, posso simplismente  juntar imcAmigo + imcFlávio (POIS AMBAS TEM JÁ TEM SEUS VALORES ARMAZENADOS.)
+
+// ******* INTERAGINDO COM O USUÁRIO***********
+
+function calculadora (altura, peso) {
+return peso / (altura * altura)
+} // É a mesma ideia da outra só usei o Return
+
+var nome = prompt ("Digite seu nome :) ")
+var alturaInformada = prompt (nome + " , qual é sua altura?")
+var pesoInformado = prompt (nome + " , qual é seu peso? ")
+var imc = calculadora ( alturaInformada, pesoInformado)
+
+
+mostra (nome + ", seu IMC é " + imc)
+
+// O prompt, trata-se de uma função do JavaScript, que receberá como parâmetro a pergunta que desejamos fazer ao usuário. É nossoo primeiro contato com o usuario.
+
+pulaLinha ()
+
+if (imc < 18) {
+  mostra ( "Você está abaixo do recomendado, " + nome + ".")
+}
+ 
+if (imc > 35) {
+  mostra ( " Você está acima do rescomendado, " + nome + ".")
+}
+ 
+if ( imc >= 18 && imc <+ 35) {
+ mostra ( " Seu IMC é exelênte, " + nome + ".")
+ }
+// *** && *** significa ***e***
+
+
+</script>

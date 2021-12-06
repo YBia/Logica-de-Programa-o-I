@@ -1,0 +1,36 @@
+<script>
+    function pulaLinha () {
+        document.write ("<br>");
+        document.write ("<br>");
+    }
+    
+    function mostra (frase) {
+        document.write (frase);
+        pulaLinha();
+    }
+
+ var numeroPensado = Math.round (Math.random () * 10);
+ var tentativas = 1;
+ console.log(numeroPensado); // o ***console.log*** mostra o numero selecionado no Desenvolvedor (F12)
+
+
+ while (tentativas <= 3) { 
+      var chute = parseInt (prompt ("Digite seu chute!"));
+
+       if (chute == numeroPensado) {
+          mostra("Você ACERTOU, o número pensado foi " + numeroPensado);
+           break;
+        } 
+        else {
+           mostra ("Você ERROU! Este não foi o numero pensado") ; 
+        }
+        tentativas ++;
+    }
+ mostra ("FIM")
+
+ // PODEMOS COLOCAR ASSIM TAMBÉM:  if(chute !=  numeroPensado) {  !=  significa que não é igual
+    //mostra("Você errou, o número pensado foi " + numeroPensado);
+    
+
+
+    </script>
